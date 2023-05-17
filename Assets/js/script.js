@@ -1,6 +1,20 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
+var time = date();
+ //display current time
+$(document).ready(function(){
+   var currentDate= date().format('dddd, mmm Do yyyy');
+   $('#currentDay').html(currentDate);
+
+   $('.savebtn') ('click', function (){
+    var text = $(this).siblings('.description').val();
+    var time = $(this).parents().attr('id');
+
+    localStorage.setItem(time, text);
+   })
+
+})
 $(function () {
     var hour= dayjs().hour();
     $('.time-block').each(function()  {
