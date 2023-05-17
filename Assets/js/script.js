@@ -2,7 +2,7 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 $(function () {
-    var hour= dayjs().hour() - 6;
+    var hour= dayjs().hour();
     $('.time-block').each(function()  {
         var id=$(this).attr('id').split('-')[1];
         var rowHour = (parseInt(id));
